@@ -13,6 +13,8 @@
 		5FA6EC2B27A8685E008F3BC4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA6EC2927A8685E008F3BC4 /* Main.storyboard */; };
 		5FA6EC2D27A86860008F3BC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FA6EC2C27A86860008F3BC4 /* Assets.xcassets */; };
 		5FA6EC3027A86860008F3BC4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5FA6EC2E27A86860008F3BC4 /* LaunchScreen.storyboard */; };
+		5FA6EC3827A868A9008F3BC4 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA6EC3727A868A9008F3BC4 /* MainTabBarController.swift */; };
+		5FA6EC3A27A86A25008F3BC4 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA6EC3927A86A25008F3BC4 /* PhotosCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		5FA6EC2C27A86860008F3BC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FA6EC2F27A86860008F3BC4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5FA6EC3127A86860008F3BC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5FA6EC3727A868A9008F3BC4 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		5FA6EC3927A86A25008F3BC4 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,8 @@
 			children = (
 				5FA6EC2327A8685E008F3BC4 /* AppDelegate.swift */,
 				5FA6EC2527A8685E008F3BC4 /* SceneDelegate.swift */,
+				5FA6EC3727A868A9008F3BC4 /* MainTabBarController.swift */,
+				5FA6EC3927A86A25008F3BC4 /* PhotosCollectionViewController.swift */,
 				5FA6EC2727A8685E008F3BC4 /* ViewController.swift */,
 				5FA6EC2927A8685E008F3BC4 /* Main.storyboard */,
 				5FA6EC2C27A86860008F3BC4 /* Assets.xcassets */,
@@ -140,6 +146,8 @@
 			files = (
 				5FA6EC2827A8685E008F3BC4 /* ViewController.swift in Sources */,
 				5FA6EC2427A8685E008F3BC4 /* AppDelegate.swift in Sources */,
+				5FA6EC3827A868A9008F3BC4 /* MainTabBarController.swift in Sources */,
+				5FA6EC3A27A86A25008F3BC4 /* PhotosCollectionViewController.swift in Sources */,
 				5FA6EC2627A8685E008F3BC4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
