@@ -23,7 +23,7 @@ class PhotosCollectionViewController: UICollectionViewController {
         collectionView.backgroundColor = .orange
         setUpNavigationBar()
         setUpCollectionView()
-        
+        setupSearchBar()
         
         }
     
@@ -47,14 +47,20 @@ class PhotosCollectionViewController: UICollectionViewController {
         let titleLabel = UILabel()
         titleLabel.text = "PHOTOS"
         titleLabel.font = UIFont.systemFont(ofSize: 15, weight: .medium)
-        titleLabel.textColor = .black
+        titleLabel.textColor = .white
         navigationItem.leftBarButtonItem = UIBarButtonItem.init(customView: titleLabel)
         
         navigationItem.rightBarButtonItems = [actionBarButtonItem, addBarButtonItem]
-
-
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
     
+    private func setupSearchBar() {
+        let searchController = UISearchController(searchResultsController: nil)
+        navigationItem.searchController = searchController
+        searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        
+    }
     // MARK: - UICollectionVIewDataSource, UICollectionViewDelegate
     
     
