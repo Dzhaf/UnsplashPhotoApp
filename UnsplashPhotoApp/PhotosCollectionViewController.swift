@@ -14,6 +14,9 @@ class PhotosCollectionViewController: UICollectionViewController, UISearchBarDel
     
     private var photos = [UnsplashPhoto]()
     
+    private var  selectedImages = [UIImage]()
+     
+    
     private let itemsPerRow: CGFloat = 2
     private let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
     
@@ -44,8 +47,21 @@ class PhotosCollectionViewController: UICollectionViewController, UISearchBarDel
         print(#function)
     }
     
-    @objc private func actionBarButtonTapped() {
+    @objc private func actionBarButtonTapped(sender: UIBarButtonItem) {
         print(#function)
+        
+        let shareController = UIActivityViewController(activityItems: selectedImages, applicationActivities: nil)
+        
+        shareController.completionWithItemsHandler = { _, bool, _, _ in
+            if bool {
+                 
+            }
+
+        }
+        
+        shareController.popoverPresentationController?.barButtonItem = sender
+        shareController.popoverPresentationController?.permittedArrowDirections = .any
+        present(shareController, animated: true, completion: nil)
     }
     
     
@@ -88,6 +104,20 @@ class PhotosCollectionViewController: UICollectionViewController, UISearchBarDel
         let unsplashPhoto = photos[indexPath.item]
         cell.unsplashPhoto = unsplashPhoto
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! PhotoCell
+        guard let image = cell.photoImageView.image else { return }
+        selectedImages.append(image)
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath) as! PhotoCell
+        guard let image = cell.photoImageView.image else { return }
+        if let index = selectedImages.firstIndex(of: image) {
+            selectedImages.remove(at: index)
+        }
     }
 }
 

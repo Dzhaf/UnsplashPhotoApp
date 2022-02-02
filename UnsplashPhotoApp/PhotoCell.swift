@@ -22,7 +22,7 @@ class PhotoCell: UICollectionViewCell {
         
     }()
     
-    private let photoImageView: UIImageView = {
+     let photoImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.backgroundColor = .white
