@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhotosCollectionViewController: UICollectionViewController {
+class PhotosCollectionViewController: UICollectionViewController, UISearchBarDelegate {
      
     private lazy var addBarButtonItem: UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped))
@@ -59,6 +59,7 @@ class PhotosCollectionViewController: UICollectionViewController {
         navigationItem.searchController = searchController
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.delegate = self
         
     }
     // MARK: - UICollectionVIewDataSource, UICollectionViewDelegate
