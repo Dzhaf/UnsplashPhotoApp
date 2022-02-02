@@ -8,7 +8,10 @@
 import UIKit
 
 class PhotosCollectionViewController: UICollectionViewController, UISearchBarDelegate {
-     
+    
+    var networkService = NetworkService()
+    
+    
     private lazy var addBarButtonItem: UIBarButtonItem = {
         return UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addBarButtonTapped))
     }()
@@ -20,12 +23,14 @@ class PhotosCollectionViewController: UICollectionViewController, UISearchBarDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         collectionView.backgroundColor = .orange
         setUpNavigationBar()
         setUpCollectionView()
         setupSearchBar()
         
-        }
+    }
     
     //MARK: - NavigationItems action
     
@@ -76,3 +81,16 @@ class PhotosCollectionViewController: UICollectionViewController, UISearchBarDel
         return cell
     }
 }
+
+extension PhotosCollectionViewController {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchText)
+        
+        networkService.request(searhTerm: searchText) { (_, _) in
+            print("123")
+            
+            }
+        }
+}
+                               

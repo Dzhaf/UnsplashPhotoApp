@@ -13,7 +13,7 @@ class NetworkService {
         
         let parameters = self.prepareParaments(searchTerm: searhTerm)
         let url = self.url(params: parameters)
-        
+        print(url)
     }
     
     private func prepareParaments(searchTerm: String?) -> [String: String]{
@@ -24,6 +24,8 @@ class NetworkService {
         
         return parameters
     }
+    
+    
     private func url(params: [String: String]) -> URL {
         var components = URLComponents()
         components.scheme = "https"

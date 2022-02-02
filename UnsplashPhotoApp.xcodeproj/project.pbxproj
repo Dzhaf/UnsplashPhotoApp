@@ -43,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F1DC55527AA9FF100779C8B /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5F1DC55227AA78DE00779C8B /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		5FA6EC1727A8685E008F3BC4 = {
 			isa = PBXGroup;
 			children = (
@@ -64,9 +72,9 @@
 			children = (
 				5FA6EC2327A8685E008F3BC4 /* AppDelegate.swift */,
 				5FA6EC2527A8685E008F3BC4 /* SceneDelegate.swift */,
+				5F1DC55527AA9FF100779C8B /* Service */,
 				5FA6EC3727A868A9008F3BC4 /* MainTabBarController.swift */,
 				5FA6EC3927A86A25008F3BC4 /* PhotosCollectionViewController.swift */,
-				5F1DC55227AA78DE00779C8B /* NetworkService.swift */,
 				5FA6EC2727A8685E008F3BC4 /* ViewController.swift */,
 				5FA6EC2927A8685E008F3BC4 /* Main.storyboard */,
 				5FA6EC2C27A86860008F3BC4 /* Assets.xcassets */,
