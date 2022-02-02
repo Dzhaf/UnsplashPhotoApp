@@ -71,6 +71,7 @@ class PhotosCollectionViewController: UICollectionViewController, UISearchBarDel
         collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: PhotoCell.reuseId)
         collectionView.layoutMargins = UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
         collectionView.contentInsetAdjustmentBehavior = .automatic
+        collectionView.allowsMultipleSelection = true
     }
     
     private func setUpNavigationBar() {

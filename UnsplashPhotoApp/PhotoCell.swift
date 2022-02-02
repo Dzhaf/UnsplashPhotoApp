@@ -14,7 +14,7 @@ class PhotoCell: UICollectionViewCell {
     static let reuseId = "PhotosCell"
     
     private let checkmark: UIImageView = {
-        let image = UIImage(named: "checkmark")
+        let image = #imageLiteral(resourceName: "AppIcon29x29")
         let imageView = UIImageView(image: image)
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.alpha = 0
