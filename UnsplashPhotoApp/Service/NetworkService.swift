@@ -8,14 +8,23 @@
 import Foundation
 
 class NetworkService {
- 
-    func request(searhTerm: String, completion: (Data?, Error?) -> Void) {
+    
+    func request(searhTerm: String,  completion: @escaping (Data?, Error?) -> Void) {
         
         let parameters = self.prepareParaments(searchTerm: searhTerm)
         let url = self.url(params: parameters)
-        print(url)
+        var request = URLRequest(url: url)
+        request.allHTTPHeaderFields = prepareHeader()
+        request.httpMethod = "get"
+        let task = createDataTask(from: request, completion: completion)
+        task.resume()
     }
     
+    private func prepareHeader() -> [String: String]? {
+        var headers = [String: String]()
+        headers["Authorization"] = "Client-ID ngh6WW_auX2hsjHDx1qQsGa-C_lt7DTjIJacXLpiAYk"
+        return headers
+    }
     private func prepareParaments(searchTerm: String?) -> [String: String]{
         var parameters = [String: String]()
         parameters["query"] = searchTerm
@@ -37,5 +46,13 @@ class NetworkService {
         
     }
     
+    private func createDataTask(from request: URLRequest, completion: @escaping  (Data? , Error?) -> Void) -> URLSessionDataTask {
+        return URLSession.shared.dataTask(with: request) { (data, response, error) in
+            DispatchQueue.main.async {
+                completion(data, error)
+            }
+        }
+    }
+    
 }
- 
+
