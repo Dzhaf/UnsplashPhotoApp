@@ -12,6 +12,10 @@
 		5F1DC55727AAA68D00779C8B /* NetworkDataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1DC55627AAA68D00779C8B /* NetworkDataFetcher.swift */; };
 		5F1DC55927AAA6F900779C8B /* SearchResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1DC55827AAA6F900779C8B /* SearchResults.swift */; };
 		5F1DC55C27AAB50D00779C8B /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1DC55B27AAB50D00779C8B /* PhotoCell.swift */; };
+		5F1DC55F27AAF99100779C8B /* LikesCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1DC55E27AAF99100779C8B /* LikesCollectionViewController.swift */; };
+		5F1DC56227AAF9DE00779C8B /* LikesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1DC56127AAF9DE00779C8B /* LikesCollectionViewCell.swift */; };
+		5F1DC56427AAFA9900779C8B /* UIKit + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1DC56327AAFA9900779C8B /* UIKit + Extension.swift */; };
+		5F1DC56627AB055900779C8B /* WaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F1DC56527AB055900779C8B /* WaterfallLayout.swift */; };
 		5FA6EC2427A8685E008F3BC4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA6EC2327A8685E008F3BC4 /* AppDelegate.swift */; };
 		5FA6EC2627A8685E008F3BC4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA6EC2527A8685E008F3BC4 /* SceneDelegate.swift */; };
 		5FA6EC2827A8685E008F3BC4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FA6EC2727A8685E008F3BC4 /* ViewController.swift */; };
@@ -27,6 +31,10 @@
 		5F1DC55627AAA68D00779C8B /* NetworkDataFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDataFetcher.swift; sourceTree = "<group>"; };
 		5F1DC55827AAA6F900779C8B /* SearchResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResults.swift; sourceTree = "<group>"; };
 		5F1DC55B27AAB50D00779C8B /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
+		5F1DC55E27AAF99100779C8B /* LikesCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCollectionViewController.swift; sourceTree = "<group>"; };
+		5F1DC56127AAF9DE00779C8B /* LikesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesCollectionViewCell.swift; sourceTree = "<group>"; };
+		5F1DC56327AAFA9900779C8B /* UIKit + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit + Extension.swift"; sourceTree = "<group>"; };
+		5F1DC56527AB055900779C8B /* WaterfallLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallLayout.swift; sourceTree = "<group>"; };
 		5FA6EC2027A8685E008F3BC4 /* UnsplashPhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnsplashPhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5FA6EC2327A8685E008F3BC4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5FA6EC2527A8685E008F3BC4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,7 +68,6 @@
 				AF0C77E5B3319E06B46E9392 /* Pods-UnsplashPhotoApp.debug.xcconfig */,
 				B69D711322BEA4B9296007D7 /* Pods-UnsplashPhotoApp.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -80,6 +87,25 @@
 				5F1DC55827AAA6F900779C8B /* SearchResults.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		5F1DC55D27AAF94300779C8B /* Photos */ = {
+			isa = PBXGroup;
+			children = (
+				5FA6EC3927A86A25008F3BC4 /* PhotosCollectionViewController.swift */,
+				5F1DC55B27AAB50D00779C8B /* PhotoCell.swift */,
+				5F1DC56527AB055900779C8B /* WaterfallLayout.swift */,
+			);
+			path = Photos;
+			sourceTree = "<group>";
+		};
+		5F1DC56027AAF99700779C8B /* Likes */ = {
+			isa = PBXGroup;
+			children = (
+				5F1DC55E27AAF99100779C8B /* LikesCollectionViewController.swift */,
+				5F1DC56127AAF9DE00779C8B /* LikesCollectionViewCell.swift */,
+			);
+			path = Likes;
 			sourceTree = "<group>";
 		};
 		5FA6EC1727A8685E008F3BC4 = {
@@ -105,15 +131,16 @@
 			children = (
 				5FA6EC2327A8685E008F3BC4 /* AppDelegate.swift */,
 				5FA6EC2527A8685E008F3BC4 /* SceneDelegate.swift */,
-				5F1DC55527AA9FF100779C8B /* Service */,
 				5FA6EC3727A868A9008F3BC4 /* MainTabBarController.swift */,
-				5FA6EC3927A86A25008F3BC4 /* PhotosCollectionViewController.swift */,
-				5F1DC55B27AAB50D00779C8B /* PhotoCell.swift */,
+				5F1DC55527AA9FF100779C8B /* Service */,
+				5F1DC56027AAF99700779C8B /* Likes */,
+				5F1DC55D27AAF94300779C8B /* Photos */,
 				5FA6EC2727A8685E008F3BC4 /* ViewController.swift */,
 				5FA6EC2927A8685E008F3BC4 /* Main.storyboard */,
 				5FA6EC2C27A86860008F3BC4 /* Assets.xcassets */,
 				5FA6EC2E27A86860008F3BC4 /* LaunchScreen.storyboard */,
 				5FA6EC3127A86860008F3BC4 /* Info.plist */,
+				5F1DC56327AAFA9900779C8B /* UIKit + Extension.swift */,
 			);
 			path = UnsplashPhotoApp;
 			sourceTree = "<group>";
@@ -242,11 +269,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				5F1DC55727AAA68D00779C8B /* NetworkDataFetcher.swift in Sources */,
+				5F1DC55F27AAF99100779C8B /* LikesCollectionViewController.swift in Sources */,
+				5F1DC56227AAF9DE00779C8B /* LikesCollectionViewCell.swift in Sources */,
 				5F1DC55C27AAB50D00779C8B /* PhotoCell.swift in Sources */,
 				5FA6EC2827A8685E008F3BC4 /* ViewController.swift in Sources */,
 				5FA6EC2427A8685E008F3BC4 /* AppDelegate.swift in Sources */,
 				5FA6EC3827A868A9008F3BC4 /* MainTabBarController.swift in Sources */,
+				5F1DC56627AB055900779C8B /* WaterfallLayout.swift in Sources */,
 				5FA6EC3A27A86A25008F3BC4 /* PhotosCollectionViewController.swift in Sources */,
+				5F1DC56427AAFA9900779C8B /* UIKit + Extension.swift in Sources */,
 				5F1DC55327AA78DE00779C8B /* NetworkService.swift in Sources */,
 				5F1DC55927AAA6F900779C8B /* SearchResults.swift in Sources */,
 				5FA6EC2627A8685E008F3BC4 /* SceneDelegate.swift in Sources */,
